@@ -1,0 +1,90 @@
+task 4:
+Question: Explain the concept of hoisting in JavaScript and provide an example to demonstrate the difference between hoisting with var and hoisting with let (or const).
+Answer: Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+Inevitably, this means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.
+Hoisting works differently for variables declared with var compared to those declared with let or const. Let's explore the differences using examples:
+- Hoisting with var:
+
+console.log(x);  // Output: undefined
+var x = 5;
+console.log(x);  // Output: 5
+
+In this example, the variable x is declared and assigned a value of 5 after the first console.log() statement. 
+Despite that, the first console.log() does not throw an error. Instead, it outputs undefined.
+This is because the variable declaration var x is hoisted to the top of the scope. 
+
+- Hoisting with let or const:
+
+console.log(y);  // Output: ReferenceError: y is not defined
+let y = 10;
+console.log(y);  // Output: 10
+
+n this example, the variable y is declared using let. 
+However, when we try to access it before its declaration, it throws a ReferenceError. 
+Unlike var, variables declared with let or const are not initialized or accessible until their declarations are encountered during runtime. 
+
+
+
+
+task 5:
+Question: Compare and explain the differences between var, let, and const when declaring variables in JavaScript.
+Answer: When declaring variables in JavaScript, you have three options: var, let, and const. These keywords have different behaviors and scoping rules.
+
+1) var:
+- Scope: Variables declared with 'var' are function-scoped or  global-scoped, meaning their scope is limited to the function in which they are declared and they are visible through blocks;
+
+if (true) {
+  var test = true; // use "var" instead of "let"
+}
+alert(test); // true, the variable lives after if
+
+- Hoisting: 'var' declarations are hoisted to the top of their scope before code execution. However, only the declaration is hoisted, not the assignment.
+
+console.log(x);  // Output: undefined
+var x = 5;
+console.log(x);  // Output: 5
+
+- Redeclaration and reassignment: Variables declared with 'var' can be redeclared and reassigned within their scope without any errors.
+
+var user = "Pete";
+var user = "John"; // this "var" does nothing (already declared)
+// ...it doesn't trigger an error
+alert(user); // John
+
+2) let:
+- Scope: Variables declared with 'let' are block-scoped, meaning their scope is limited to the block (enclosed within curly braces) in which they are declared.
+
+if (true) {
+  let test = true; // use "let"
+}
+alert(test); // ReferenceError: test is not defined
+
+- Hoisting: Unlike 'var', 'let' declarations are not hoisted to the top of their scope. They are only accessible after their declaration in the code.
+
+console.log(y);  // Output: ReferenceError: y is not defined
+let y = 10;
+console.log(y);  // Output: 10
+
+- No redeclaration: Variables declared with let cannot be redeclared within the same scope. However, they can be reassigned.
+
+let user;
+let user; // SyntaxError: 'user' has already been declared
+
+3) const:
+- Scope: Variables declared with 'const' are block-scoped, meaning their scope is limited to the block (enclosed within curly braces) in which they are declared.
+
+if (true) {
+  const test = true; // use "const"
+}
+alert(test); // ReferenceError: test is not defined
+
+- Hoisting: Unlike 'var', 'const' declarations are not hoisted to the top of their scope. They are only accessible after their declaration in the code.
+
+console.log(y);  // Output: ReferenceError: y is not defined
+const y = 10;
+console.log(y);  // Output: 10
+
+- Must be initialized and cannot be reassigned: Variables declared with const must be assigned an initial value at the time of declaration, and once assigned, their value cannot be changed. They are read-only constants.
+
+const myBirthday = '18.04.1982';
+myBirthday = '01.01.2001'; // error, can't reassign the constant!
