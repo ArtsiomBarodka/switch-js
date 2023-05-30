@@ -1,7 +1,5 @@
 function isObject(value) {
-  return (
-    value !== null && (typeof value === "object" || typeof value === "function")
-  );
+  return value !== null && !Array.isArray(value) && typeof value === "object";
 }
 
 console.log(`If '1' value is object: ${isObject(1)}`);
