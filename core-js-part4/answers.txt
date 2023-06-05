@@ -1,0 +1,14 @@
+task 7:
+Question: Explain the concept of prototypes in JavaScript and how they are used to achieve inheritance and share properties and methods between objects.
+Answer: In JavaScript, prototypes are a fundamental part of the language's object-oriented programming model. 
+They allow objects to inherit properties and methods from other objects, enabling code reuse and achieving inheritance-like behavior.
+Every JavaScript object has an associated prototype, which can be accessed via the prototype property of the constructor function used to create the object.
+The prototype is an object itself, and it contains properties and methods that are shared among all instances created by that constructor function.
+When you access a property or method on an object, JavaScript first checks if the object itself has that property or method.
+If it doesn't, it then looks at the object's prototype and checks if the prototype has the requested property or method.
+If the property or method is found in the prototype, it is used.
+This prototype chain continues until the top-level Object.prototype, which is the ultimate prototype for all objects in JavaScript.
+If the property or method is not found at any level of the prototype chain, undefined is returned.
+Prototypes are particularly useful for achieving inheritance-like behavior in JavaScript.
+You can create a constructor function and define common properties and methods on its prototype.
+Objects created using that constructor function will automatically inherit those properties and methods from the prototype.
