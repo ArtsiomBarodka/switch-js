@@ -1,7 +1,4 @@
 let getSumOfNumbers = (...nums) => {
-  if (nums.length === 0) {
-    return 0;
-  }
   return nums.reduce((sum, current) => sum + current, 0);
 };
 

@@ -1,5 +1,5 @@
 function getMultipliedByTwoArray(arr) {
-  return arr.map((val) => val * val);
+  return arr.map((val) => val * 2);
 }
 
 const array = [1, 2, 4, 6];
