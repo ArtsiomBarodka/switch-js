@@ -1,6 +1,6 @@
 const randomNum = () => Math.floor(Math.random() * 10) + 1;
 
-function p() {
+function fetchNumber() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const number = randomNumber();
@@ -19,7 +19,7 @@ function p() {
 async function process() {
   console.log("Async Processing number request");
   try {
-    const number = await p();
+    const number = await fetchNumber();
     console.log("Correct number is received:", number);
   } catch (error) {
     console.log("Async Processing number request is failed: ", error.message);
