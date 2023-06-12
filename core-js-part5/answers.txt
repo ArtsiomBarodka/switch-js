@@ -1,0 +1,47 @@
+task 1:
+Question: Explain the difference between synchronous and asynchronous JavaScript code execution and provide an example for each.
+Answer: Synchronous and asynchronous are two different approaches to executing JavaScript code that determine the order in which operations are performed and how the program handles waiting for certain tasks to complete.
+
+- Synchronous Execution:
+In synchronous execution, JavaScript code is executed sequentially, one operation at a time, blocking the execution until the current operation is completed.
+It means that the program waits for each operation to finish before moving on to the next one.
+Example:
+{
+  function syncOperation() {
+    console.log('Operation 1');
+    console.log('Operation 2');
+  }
+
+  console.log('Start');
+  syncOperation();
+  console.log('End');
+}
+Output:
+-Start
+-Operation 1
+-Operation 2
+-End
+
+- Asynchronous Execution:
+In asynchronous execution, JavaScript code doesn't block the program's execution.
+Instead, it allows tasks to be scheduled and continues executing the rest of the code without waiting for the tasks to complete.
+Asynchronous operations are typically used for tasks that may take some time to complete, such as network requests, file I/O, or timers.
+
+Example:
+{
+  function asyncOperation() {
+    console.log('Async Operation started');
+    setTimeout(function() {
+      console.log('Async Operation completed');
+    }, 2000);
+  }
+
+  console.log('Start');
+  asyncOperation();
+  console.log('End');
+}
+Output:
+-Start
+-Async Operation started
+-End
+-Async Operation completed
