@@ -1,0 +1,81 @@
+/* Global 
+--------------------------------*/
+* {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: red;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: blue;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+/* Header 
+--------------------------------*/
+.app-header {
+  background-color: forestgreen;
+  height: 100px;
+  grid-column-start: 1;
+  grid-column-end: 11;
+  text-align: center;
+}
+
+/* Sidebar 
+--------------------------------*/
+.app-sidebar {
+  background-color: lightcoral;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* Main content 
+--------------------------------*/
+.app-main {
+  background-color: blanchedalmond;
+  grid-column-start: 3;
+  grid-column-end: 11;
+}
+
+div.special p {
+  font-size: 18px;
+}
+
+.special {
+  padding: 10px;
+}
+
+.content-image {
+  float: left;
+  width: 450px;
+  height: 600px;
+}
+
+.content-image-caption {
+  clear: both;
+  width: 450px;
+  text-align: center;
+}
+
+/* Footer 
+--------------------------------*/
+.app-footer {
+  background-color: blueviolet;
+  height: 30px;
+  grid-column-start: 1;
+  grid-column-end: 11;
+  text-align: center;
+}
