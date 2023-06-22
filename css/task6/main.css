@@ -26,7 +26,7 @@ h1 {
 
 /* Header 
 --------------------------------*/
-#app-header {
+.app-header {
   background-color: forestgreen;
   height: 100px;
   grid-column-start: 1;
@@ -36,7 +36,7 @@ h1 {
 
 /* Sidebar 
 --------------------------------*/
-#app-sidebar {
+.app-sidebar {
   background-color: lightcoral;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -44,7 +44,7 @@ h1 {
 
 /* Main content 
 --------------------------------*/
-main {
+.app-main {
   background-color: blanchedalmond;
   grid-column-start: 3;
   grid-column-end: 11;
@@ -56,7 +56,7 @@ div.special p {
 
 /* Footer 
 --------------------------------*/
-#app-footer {
+.app-footer {
   background-color: blueviolet;
   height: 30px;
   grid-column-start: 1;
