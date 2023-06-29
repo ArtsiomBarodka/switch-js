@@ -1,7 +1,7 @@
 const highlightButton = document.getElementById("highlight-button");
+const paragraphs = document.querySelectorAll("p");
 
 const highlightParagraphs = () => {
-  const paragraphs = document.querySelectorAll("p");
   paragraphs.forEach((p) => {
     p.classList.add("highlight");
   });
