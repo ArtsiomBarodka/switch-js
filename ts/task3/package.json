@@ -1,0 +1,13 @@
+{
+  "name": "task3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "RMDIR dist /S /Q"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
